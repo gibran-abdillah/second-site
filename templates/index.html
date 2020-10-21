@@ -1,0 +1,10 @@
+<h2>Blog</h2>
+
+
+
+{% for id,blog in blogs%}
+
+    {{id}}
+    <a href='{{url_for("show_detail",id=blog.blog_id)}}'>{{blog.title_blog}}</a>
+    <p>{{blog.konten[3]}}</p>
+{% endfor %}

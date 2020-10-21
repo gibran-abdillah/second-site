@@ -1,0 +1,10 @@
+{% with pesan = get_flashed_messages() %} 
+
+{% if pesan %}
+  {% for data_pesan in pesan %} <!-- get all message -->
+  <p>{{data_pesan}}</p> <!-- show all message -->
+  {% endfor %}
+
+{%endif%}
+
+{% endwith %}

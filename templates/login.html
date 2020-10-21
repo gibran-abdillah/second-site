@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>Login User</title>
+    </head>
+</html>
+<body>
+    <form action='' method="POST" novalidate>
+        {{form.csrf_token()}}
+        <p>{{form.username}}  </p>
+        <p>{{form.password}}  </p>
+        {{form.username.errors.0}}
+        {{form.password.errors.0}}
+        {% include 'pesan.html' %}
+        {{form.submit}}
+    </form>
+</body>
